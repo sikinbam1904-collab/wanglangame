@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#190e12">
+  <meta name="description" content="วังหลัง: ชะตารักเหนือบัลลังก์ — เกมเนื้อเรื่องเลือกเส้นทาง 10 ตอน">
+  <title>วังหลัง — ชะตารักเหนือบัลลังก์</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome" aria-label="กลับหน้าแรก"><span class="brand-mark">凰</span><span><b>วังหลัง</b><small>ชะตารักเหนือบัลลังก์</small></span></a>
+    <div class="top-actions"><span class="pill"><i></i> VISUAL NOVEL</span><button id="soundBtn" class="icon-btn" aria-label="เปิดปิดเสียง" title="เอฟเฟกต์เสียง">♫</button></div>
+  </header>
+  <main id="app" class="shell">
+    <section id="homeScreen" class="hero screen">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> เรื่องราวของอำนาจ ความรัก และการทรยศ <span>✦</span></div>
+        <h1>วังหลัง</h1>
+        <p class="hero-subtitle">ชะตารักเหนือบัลลังก์</p>
+        <p class="hero-text">ในวังที่รอยยิ้มอาจซ่อนคมมีด ทุกการตัดสินใจคือการเดิมพันกับชะตาชีวิต<br>คุณจะเป็นผู้ถูกเลือก…หรือเป็นผู้กำหนดชะตาของทุกคน?</p>
+        <div class="hero-buttons"><button id="startBtn" class="btn btn-gold">เริ่มต้นเรื่องราว <span>↗</span></button><button id="continueBtn" class="btn btn-ghost hidden">เล่นต่อจากเดิม</button><button id="howBtn" class="btn btn-ghost">วิธีเล่น</button></div>
+        <div class="hero-meta"><span>✧ 10 ตอน</span><span>✧ 8 บทสรุป</span><span>✧ ทุกทางเลือกมีความหมาย</span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="ภาพบรรยากาศวังหลวงใต้แสงจันทร์">
+        <div class="moon"></div><div class="roof roof-back"></div><div class="roof roof-front"></div>
+        <div class="lantern lantern-a">✧</div><div class="lantern lantern-b">✧</div>
+        <div class="petal p1">✿</div><div class="petal p2">✿</div><div class="petal p3">✿</div>
+        <div class="hero-seal">花<br><small>ชะตา</small></div>
+        <div class="art-caption"><span>PALACE CHRONICLES</span><b>ใต้เงาจันทร์<br>เหนือบัลลังก์</b></div>
+      </div>
+    </section>
+
+    <section id="setupScreen" class="screen hidden">
+      <div class="section-heading"><span class="eyebrow">บทที่ศูนย์ · จุดเริ่มต้น</span><h2>ก่อนก้าวเข้าสู่วังหลวง</h2><p>เลือกภูมิหลังของคุณ เส้นทางบางสายจะเปิดเผยเมื่อถึงเวลา</p></div>
+      <div class="origin-grid">
+        <button class="origin-card selected" data-origin="noble"><span class="origin-icon">🪷</span><b>คุณหนูตระกูลสูงศักดิ์</b><p>ชาติตระกูลสูงส่ง มีผู้หนุนหลัง แต่ถูกจับตามอง</p><small>เริ่มต้น: อำนาจ +10</small></button>
+        <button class="origin-card" data-origin="fallen"><span class="origin-icon">🥀</span><b>บุตรีขุนนางตกอับ</b><p>ไม่มีใครคาดหวังจากคุณ จึงมีพื้นที่ให้ซ่อนคม</p><small>เริ่มต้น: สติปัญญา +10</small></button>
+        <button class="origin-card" data-origin="mystery"><span class="origin-icon">🦊</span><b>หญิงสาวปริศนา</b><p>อดีตที่หายไปอาจเป็นกุญแจสู่ความลับของราชวงศ์</p><small>เริ่มต้น: ความลับ +10</small></button>
+        <button class="origin-card" data-origin="revenge"><span class="origin-icon">🩸</span><b>ผู้กลับมาเพื่อแก้แค้น</b><p>คุณจำได้ว่าใครพรากทุกอย่างไป และจะไม่ลืม</p><small>เริ่มต้น: ความแค้น +10</small></button>
+      </div>
+      <div class="form-row"><label for="playerName">ชื่อของคุณในวัง</label><input id="playerName" maxlength="18" placeholder="เช่น หลินเยว่" value="หลินเยว่"><span class="field-hint">จะใช้ชื่อนี้ในบทสนทนาและบทสรุป</span></div>
+      <div class="center"><button id="beginStoryBtn" class="btn btn-gold">เปิดประตูวังหลวง <span>↗</span></button></div>
+    </section>
+
+    <section id="gameScreen" class="screen hidden">
+      <div class="game-topline"><div><span class="eyebrow" id="chapterLabel">ตอนที่ 01</span><h2 id="chapterTitle">ก้าวแรกสู่ตำหนัก</h2></div><button id="saveBtn" class="btn btn-small btn-ghost">บันทึกเกม</button></div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="story-layout">
+        <article class="story-card">
+          <div class="scene-art" id="sceneArt"><div class="scene-moon"></div><div class="scene-building"></div><div class="scene-glow"></div><span id="sceneSymbol">❀</span><small id="sceneCaption">ตำหนักชิงเหอ · ยามโพล้เพล้</small></div>
+          <div class="story-content"><div class="speaker-line"><span class="speaker-avatar" id="speakerAvatar">宮</span><span><b id="speakerName">ผู้บรรยาย</b><small id="speakerRole">เสียงกระซิบในวัง</small></span></div><p id="storyText" class="story-text" aria-live="polite"></p><div id="choiceList" class="choice-list"></div><div id="feedback" class="feedback hidden" aria-live="polite"></div></div>
+        </article>
+        <aside class="side-panel">
+          <div class="panel-block"><div class="panel-title">ชะตาของคุณ <span>✧</span></div><div id="statsList"></div></div>
+          <div class="panel-block"><div class="panel-title">บุคคลสำคัญ</div><div class="person"><span class="person-face face-red">帝</span><span><b>ฮ่องเต้เซวียน</b><small>ผู้มีพระทัยยากหยั่งถึง</small><em id="emperorRel">ความสัมพันธ์: 0</em></span></div><div class="person"><span class="person-face face-blue">蘭</span><span><b>องค์หญิงหลัน</b><small>สตรีผู้รู้ความลับมากเกินไป</small><em id="princessRel">ความสัมพันธ์: 0</em></span></div><div class="person"><span class="person-face face-gold">鳳</span><span><b>ฮองเฮาเฟิ่ง</b><small>รอยยิ้มงามดั่งคมมีด</small><em id="queenRel">ความสัมพันธ์: 0</em></span></div></div>
+          <div class="panel-block note-block"><span>✦ บันทึกชะตา</span><p>ทุกคำตอบจะส่งผลต่อคะแนนลับและบทสรุปของคุณ</p><div id="clueCount">เบาะแสที่พบ 0 ชิ้น</div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="endingScreen" class="screen hidden">
+      <div class="ending-hero"><div class="ending-sigil" id="endingSigil">凰</div><span class="eyebrow">บทสรุปชะตาชีวิต · ENDING UNLOCKED</span><h2 id="endingTitle">ราชินีผู้ชักใย</h2><p id="endingTagline"></p><div class="ending-rank" id="endingRank">บทสรุปที่ค้นพบ</div></div>
+      <div class="ending-layout"><div class="ending-story"><h3>เรื่องราวหลังม่าน</h3><p id="endingText"></p><div class="ending-stats" id="endingStats"></div><div class="ending-actions"><button id="replayBtn" class="btn btn-gold">เริ่มชะตาใหม่ ↻</button><button id="homeBtn" class="btn btn-ghost">กลับหน้าหลัก</button></div></div><div class="ending-art" id="endingArt"><div class="ending-moon"></div><span id="endingArtSymbol">👑</span><small>命運 · FATE</small></div></div>
+      <p class="ending-footnote">ทุกการเลือกคือเรื่องราวของคุณ · เล่นอีกครั้งเพื่อค้นพบชะตาที่แตกต่าง</p>
+    </section>
+
+    <section id="howScreen" class="screen hidden">
+      <div class="section-heading"><span class="eyebrow">คู่มือผู้เข้าสู่วัง</span><h2>วิธีเล่น</h2><p>วังหลวงไม่เคยมีคำตอบที่ถูกต้องเพียงข้อเดียว</p></div>
+      <div class="how-grid"><div><span>01</span><h3>เลือกเส้นทาง</h3><p>อ่านเหตุการณ์และเลือกสิ่งที่คุณคิดว่าดีที่สุด บางครั้งความเมตตาก็มีราคา</p></div><div><span>02</span><h3>สะสมชะตา</h3><p>คะแนนอำนาจ ความรัก สติปัญญา ความแค้น และความไว้วางใจจะเปลี่ยนไปตามการตัดสินใจ</p></div><div><span>03</span><h3>ค้นพบความจริง</h3><p>เบาะแสและความสัมพันธ์จะช่วยเปิดทางสู่เหตุการณ์พิเศษ</p></div><div><span>04</span><h3>รับบทสรุป</h3><p>เมื่อผ่านครบ 10 ตอน ระบบจะเลือกหนึ่งใน 8 บทสรุปตามเส้นทางของคุณ</p></div></div>
+      <div class="center"><button id="howBackBtn" class="btn btn-gold">กลับไปยังหน้าหลัก</button></div>
+    </section>
+    <footer><span>花 · วังหลัง</span><span>นิยายภาพเชิงโต้ตอบ · ทุกชะตาเริ่มจากการเลือก</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
